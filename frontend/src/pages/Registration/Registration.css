@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    min-height: 50vh;
+    color: #b1db3d;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-container {
+    padding: 16px;
+    width: 31%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 100px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 0px white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0 #93b438;
+}
+
+button {
+    background-color: #93b438;
+    color: white;
+    padding: 10px 100px;
+    margin: 20px 0;
+    border: 1px ridge;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    box-shadow: 0px 0px 5px 1px #b1db3d;
+}
+
+button:hover {
+    opacity: 0.8;
+}
