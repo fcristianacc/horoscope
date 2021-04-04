@@ -30,6 +30,11 @@ function Login() {
           <Link to="/registration">
             <button type="register">Create Account</button>
           </Link>
+          <Link to="/signs">
+            <button type="sign">
+              What is your Sign? (Without Registration)
+            </button>
+          </Link>
         </div>
       </div>
     </div>

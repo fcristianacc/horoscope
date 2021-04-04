@@ -3,13 +3,23 @@ import "./Header.css";
 
 function Header(props) {
   const [clicked, setClicked] = useState(false);
-  const [list, setList] = useState(["a", "b", "c"]);
+  const [newElement, setNewElement] = useState(null);
+  
+  //const [list, setList] = useState(["a", "b", "c"]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (clicked) {
       setList(["a", "b", "c", "d"]);
     } else {
       setList(["1", "2", "3", "4"]);
+    }
+  }, [clicked]); */
+
+  useEffect(() => {
+    if (clicked) {
+      setNewElement(<div className="message">Welcome to this Page!</div>);
+    } else {
+      setNewElement("");
     }
   }, [clicked]);
 
@@ -20,7 +30,7 @@ function Header(props) {
         id="title-container"
         onClick={() => setClicked(!clicked)}
       >
-        <div className={clicked ? "title-text" : "title-text2"}>
+        <div className={clicked ? "title-text" : "title-text-clicked"}>
           <span
             id="title"
             className={props.tururu ? "header-green" : "header-purple"}
@@ -29,11 +39,14 @@ function Header(props) {
           </span>
         </div>
       </header>
-      <div>
+      {/* {clicked && <div>olarilokeka</div>}
+      {clicked ? <div>blabla</div> : ""} */}
+      {newElement}
+      {/*       <div>
         {list.map((element) => (
           <p>{element}</p>
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

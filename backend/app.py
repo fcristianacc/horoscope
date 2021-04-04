@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from datetime import datetime
 import re
 
@@ -39,8 +39,8 @@ def view_sign(day, month, year):
                 sign_result = getLists('signs')[index]
                 break
         
-        result = "O teu signo é " + sign_result + "!"
+        result = dict(sign_name="O teu signo é " + sign_result + "!")
     except UnboundLocalError:
-        result = "O teu signo é Capricórnio!"
+        result = dict(sign_name="O teu signo é Capricórnio!")
 
-    return result
+    return jsonify(result)
